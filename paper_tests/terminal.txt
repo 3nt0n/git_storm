@@ -1,0 +1,37 @@
+
+
+~/Modelchecking/PRISM/from_source/prism-4.7-src/prism/bin/xprism
+
+~/Modelchecking/PRISM/from_source/prism-4.7-src/prism/prism-examples/seminar_anton/wimmer_fail.pm     //wimmer_fail.pctl
+
+
+
+
+-Show algortihm. Change precision live (from 0.000001 to 0.01) to show how result changes from 1.0 to 0.0.  1.0/True is incorrect
+
+~/Modelchecking/PRISM/from_source/prism-4.7-src/prism/bin/prism  ~/Modelchecking/PRISM/from_source/prism-4.7-src/prism-examples/seminar_anton/wimmer_fail.pm ~/Modelchecking/PRISM/from_source/prism-4.7-src/prism-examples/seminar_anton/wimmer_fail.pctl 
+
+
+
+-use better algorithm - Interval iteration for probabilistic reachability
+
+~/Modelchecking/PRISM/from_source/prism-4.7-src/prism/bin/prism  ~/Modelchecking/PRISM/from_source/prism-4.7-src/prism-examples/seminar_anton/wimmer_fail.pm ~/Modelchecking/PRISM/from_source/prism-4.7-src/prism-examples/seminar_anton/wimmer_fail.pctl -ii
+
+
+
+- show that still wrong result (1.0) if precision not enough, y = 10^-15 (in paper they actually said <) 10^-12)
+
+~/Modelchecking/PRISM/from_source/prism-4.7-src/prism/bin/prism  ~/Modelchecking/PRISM/from_source/prism-4.7-src/prism-examples/seminar_anton/wimmer_fail_15gamma.pm ~/Modelchecking/PRISM/from_source/prism-4.7-src/prism-examples/seminar_anton/wimmer_fail.pctl -ii
+
+
+----------------------------
+
+
+Storm-Test
+
+ storm --prism wimmer_fail_storm.pm --prop "P<=0.5 [s=1 | s=2 | s=5 | s=6 U s=3]" --minmax:method interval-iteration
+ storm --prism wimmer_fail_storm.pm --prop "P<=0.5 [s=1 | s=2 | s=5 | s=6 U s=3]" --minmax:method interval-iteration --sound
+ storm --prism wimmer_fail_storm.pm --prop "P<=0.5 [s=1 | s=2 | s=5 | s=6 U s=3]" --minmax:method interval-iteration --exact
+
+
+
