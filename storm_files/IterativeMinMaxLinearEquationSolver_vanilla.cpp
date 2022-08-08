@@ -567,7 +567,7 @@ bool IterativeMinMaxLinearEquationSolver<ValueType>::solveEquationsIntervalItera
 
     //anton - set some variables for testing
 
-    bool improvedIntervalIteration = true;
+    bool improvedIntervalIteration = false;
     bool print_intermediate_results = false;
 
 
