@@ -1,0 +1,10 @@
+
+-Open Presentation
+
+-Set up Zoom/BBB
+
+-Storm Example Test in 'seminar_anton'
+
+-Show code in solver
+
+-Run Example Test with new code --minmax:method interval iteration
