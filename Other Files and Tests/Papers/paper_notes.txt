@@ -1,0 +1,113 @@
+Correct Probabilistic Model Checking with Floating-Point Arithmetic
+
+Arnd Hartmanns
+
+Main problem - Value Iteration[8]. Our core problem here is about probability of reaching a goal state (reachability probability)
+- We start with underapproximation and iteratively inprove the value.
+  Also overapproximation. We stop if difference between both is <= €
+
+++++++
+
+Example where it can go wrong:
+
+-II with fixed-precision (usually 64-bit IEEE 754 double precision) floating point numbers 
+the default round to nearest, ties to even policy can cause
+II to deliver incorrect results. Wimmer et al. [29] show an example where PMC
+tools incorrectly state that a simple PCTL property is satisfied by a small Markov
+chain due to the underlying numeric difference having disappeared in rounding
+We confirmed with current versions of Prism, Storm, and mcsta problem persists to today, even when requesting a “sound” algorithm like II. 
+
+
+-None of Prism, Storm, and mcsta appear to perform this extra check, though. In this paper, we only use PCTL for non-nested top-level P ∗ (F . . .) operators; the results are then true if s I ∈ S P , should be unknown in case the “unknown” situation applies to s I , and are false otherwise.
+
+-The current implementations of II (in Prism, Storm, and mcsta) IEEE 754
+double-precision floating-point arithmetic 
+
+-We have encoded M n γ in the Modest and Prism languages, and checked the
+answers returned by Prism 4.7, Storm 1.6.4, and mcsta 3.1 for the property.
+The correct result would be false. Prism returns true in its default configuration,
+which uses an unsound algorithm, and false when requesting an algorithm with
+exact rational arithmetic, for which M n γ is small enough. If we explicitly request
+Prism to use II, then the result depends on the specified €: for € ≥ 10 −11 , we get
+the correct result of false; for smaller € ≤ 10 −12 , i.e. higher precision, however, we
+incorrectly get true. Storm incorrectly returns true in its default configuration
+as well as when we request a sound algorithm via the --sound parameter. Only
+when using an exact rational algorithm via the --exact parameter does Storm
+correctly return false.
+
+++++++
+
+Our contribution. We present the first PMC implementation that computes cor-
+rect lower and upper bounds on reachability probabilities despite using floating-
+point arithmetic.
+We benefit from two developments 
+ 
+thus in Sect. 5 we report on extensive experiments across different software and hardware configurations on models from the Quantitative Verification Benchmark Set (QVBS) [20].
+
+
++++++++
+
+Rounding in code:
+
+In addition to the default round to nearest, ties to even mode, the IEEE 754
+standard defines three directed rounding modes: 
+round towards zero (i.e. truncation), 
+round towards +∞ (i.e. always round up), 
+and round towards −∞ (i.e.always round down). 
+
+Control of floating-point rounding mode rarely-used feature; support for it is diverse.
+
+For C and C++, the C99 and C++11 standards introduced access to the
+floating-point environment. 
+
+The fenv.h/cfenv headers include the fegetround and fesetround functions to query the current rounding mode and change it, respectively. 
+we focus on a C implementation
+
+
+-Do "volatile" otherwise we can still have wrong rounding on assembly level/optimisation-
+GCC in particular is not rounding mode-aware in optimisations. This means that, for example, subexpressions that are evaluated twice, with a change in rounding mode in between, may be compiled by GCC into a single evaluation before the change, with the resulting
+value stored in a register and reused after the rounding mode change. This can
+even happen when using the -frounding-math option 3 . 
+Programmers thus need to inspect the generated assembly to ensure that no problematic transformations have been made, or try to make them impossible by declaring values volatile or inserting inline assembly “barriers".
+
+
+-------
+
+
+
+TODOs:
+
+- work into the storm/prism algorithm
+- test and confirm that rounding can actually make issues in PRISM and STORM
+
+- create a prototype of the code explained in the paper and modify the STORM code accordingly (check the pdf)
+- test it on the benchmarks/experiments on the paper to confirm
+
+- own ideas: 
+	-figure out which models are especially error prone
+	-try to make it more efficient, maybe test how many digits behind comma can be rounded at start and still work
+	-what if we only round every few loop iterations ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

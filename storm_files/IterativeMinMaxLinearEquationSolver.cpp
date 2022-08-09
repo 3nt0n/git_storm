@@ -96,7 +96,7 @@ bool IterativeMinMaxLinearEquationSolver<ValueType>::internalSolveEquations(Envi
             result = solveEquationsRationalSearch(env, dir, x, b);
             break;
         case MinMaxMethod::IntervalIteration:
-            result = solveEquationsIntervalIteration(env, dir, x, b); //anton -
+            result = solveEquationsIntervalIteration(env, dir, x, b); //anton - this is the relevant function
             break;
         case MinMaxMethod::SoundValueIteration:
             result = solveEquationsSoundValueIteration(env, dir, x, b);
@@ -300,10 +300,8 @@ MinMaxLinearEquationSolverRequirements IterativeMinMaxLinearEquationSolver<Value
         requirements.requireLowerBounds();
 
     } else if (method == MinMaxMethod::IntervalIteration) {
-      cout << "anton - IntervalIteration! \n";
         // Interval iteration requires a unique solution and lower+upper bounds
         if (!this->hasUniqueSolution()) {
-          cout << "anton - hasUniqueSolution! \n";
             requirements.requireUniqueSolution();
         }
         requirements.requireBounds();
@@ -563,13 +561,11 @@ bool IterativeMinMaxLinearEquationSolver<ValueType>::solveEquationsIntervalItera
                     "Fixing scheduler choices not implemented for interval iteration, please pick a different solver");
     STORM_LOG_THROW(this->hasUpperBound(), storm::exceptions::UnmetRequirementException, "Solver requires upper bound, but none was given.");
 
-    cout << "anton - IterativeMinMaxLinearEquationSolveri! \n";
 
-    //anton - set some variables for testing
+    //anton - set some variables for easier testing
 
     bool improvedIntervalIteration = true;
     bool print_intermediate_results = false;
-
 
     //
 
@@ -741,11 +737,11 @@ bool IterativeMinMaxLinearEquationSolver<ValueType>::solveEquationsIntervalItera
         }
 
         if (print_intermediate_results){
-          cout << "anton - lowerX: ";
+          cout << "lowerX: ";
           for (auto i: *lowerX)
           std::cout << i << '|';
           cout << "\n";
-          cout << "anton - upperX: ";
+          cout << "upperX: ";
           for (auto i: *upperX)
           std::cout << i << '|';
           cout << "\n";
@@ -755,7 +751,7 @@ bool IterativeMinMaxLinearEquationSolver<ValueType>::solveEquationsIntervalItera
         this->showProgressIterative(iterations);
     }
 
-    cout << "anton - iterations: " << iterations << "\n";
+    cout << "iterations: " << iterations << "\n";
 
     this->reportStatus(status, iterations);
 

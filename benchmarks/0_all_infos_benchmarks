@@ -1,16 +1,12 @@
 
-Top: Modified II
+Top: Modified Interval Iteration
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Middle: Vanilla II
-Bottom: Only vanilla - - exact
++++++++++++++++++++++++++++++++
+Bottom: Only with '--exact' 
 
 
-
-
-
-
-
-
-
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 beb.3-4.v1.jani
 
@@ -99,7 +95,7 @@ Performance statistics:
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+with --exact
 
 Model checking property "LineSeized": Pmax=? [F (line_seized)] ...
 
@@ -124,8 +120,8 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
- ----------------------------------- 
 beb.4-8.v1.jani
 
 storm --jani beb.4-8.v1.jani --janiproperty --constants N=3  --timemem --exact
@@ -252,9 +248,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 blocksworld.5.v1.jani
 
 storm --jani blocksworld.5.v1.jani --janiproperty  --timemem --exact
@@ -345,10 +341,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 cdrive.10.v1.jani
 
 storm --jani cdrive.10.v1.jani --janiproperty  --timemem --exact
@@ -446,8 +441,9 @@ Performance statistics:
   * wallclock time: 2.036s
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
- ----------------------------------- 
+
 cdrive.2.v1.jani
 
 storm --jani cdrive.2.v1.jani --janiproperty  --timemem --exact
@@ -555,10 +551,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 cdrive.3.v1.jani
 
 storm --jani cdrive.3.v1.jani --janiproperty  --timemem --exact
@@ -667,10 +662,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 cdrive.6.v1.jani
 
 storm --jani cdrive.6.v1.jani --janiproperty  --timemem --exact
@@ -783,9 +777,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 consensus.10.v1.jani
 
 storm --jani consensus.10.v1.jani --janiproperty --constants K=2  --timemem --exact
@@ -793,7 +787,9 @@ storm --jani consensus.10.v1.jani --janiproperty --constants K=2  --timemem --ex
 -- too slow
 
 
- ----------------------------------- 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
+
+
 consensus.2.v1 (1).jani
 
 storm --jani consensus.2.v1\ \(1\).jani --janiproperty --constants K=8  --timemem --exact
@@ -975,8 +971,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
- ----------------------------------- 
+
 
 
 storm --jani consensus.2.v1\ \(2\).jani --janiproperty --constants K=16  --timemem --exact
@@ -1163,10 +1160,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 consensus.2.v1.jani
 
 storm --jani consensus.2.v1.jani --janiproperty --constants K=4  --timemem --exact
@@ -1348,8 +1344,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
- ----------------------------------- 
+
 consensus.4.v1 (1).jani
 
 storm --jani consensus.4.v1\ \(1\).jani --janiproperty --constants K=4  --timemem --exact
@@ -1527,9 +1524,9 @@ Performance statistics:
   
   
   
-  
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
- ----------------------------------- 
+
 consensus.4.v1.jani
 
 storm --jani consensus.4.v1.jani --janiproperty --constants K=2  --timemem --exact
@@ -1706,16 +1703,20 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 consensus.6.v1.jani
 
 storm --jani consensus.6.v1.jani --janiproperty --constants K=2  --timemem --exact
 
 too long
 
- ----------------------------------- 
+
+
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
+
+
 consensus.8.v1.jani
 
 storm --jani consensus.8.v1.jani --janiproperty --constants K=2  --timemem --exact
@@ -1723,7 +1724,11 @@ storm --jani consensus.8.v1.jani --janiproperty --constants K=2  --timemem --exa
 
 too long
 
- ----------------------------------- 
+
+
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
+
+
 csma.2-2.v1.jani
 
 storm --jani csma.2-2.v1.jani --janiproperty  --timemem --exact
@@ -1929,10 +1934,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 csma.2-4.v1.jani
 
 storm --jani csma.2-4.v1.jani --janiproperty  --timemem --exact
@@ -2137,10 +2141,9 @@ Performance statistics:
   
   
   
-  
-  
-  
- ----------------------------------- 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
+
+
 csma.2-6.v1.jani
 
 storm --jani csma.2-6.v1.jani --janiproperty  --timemem --exact
@@ -2342,9 +2345,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 csma.3-2.v1.jani
 
 storm --jani csma.3-2.v1.jani --janiproperty  --timemem --exact
@@ -2538,10 +2541,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 eajs.2.v1.jani
 
 storm --jani eajs.2.v1.jani --janiproperty --constants energy_capacity=100,B=5  --timemem --exact
@@ -2655,10 +2657,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 eajs.3.v1.jani
 
 storm --jani eajs.3.v1.jani --janiproperty --constants energy_capacity=100,B=5  --timemem --exact
@@ -2779,10 +2780,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 eajs.4.v1.jani
 
 storm --jani eajs.4.v1.jani --janiproperty --constants energy_capacity=100,B=5  --timemem --exact
@@ -2894,8 +2894,9 @@ Performance statistics:
 
   
  
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
- ----------------------------------- 
+
 echoring.v1 (1).jani
 
 storm --jani echoring.v1.jani --janiproperty --constants ITERATIONS=50  --timemem --exact
@@ -3113,9 +3114,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 elevators.a-11-9.v1.jani
 
 storm --jani elevators.a-11-9.v1.jani --janiproperty  --timemem --exact
@@ -3199,9 +3200,9 @@ Choice Labels: 	none
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 elevators.a-3-3.v1.jani
 
 storm --jani elevators.a-3-3.v1.jani --janiproperty  --timemem --exact
@@ -3293,8 +3294,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
- ----------------------------------- 
+
 elevators.b-11-9.v1.jani
 
 storm --jani elevators.b-11-9.v1.jani --janiproperty  --timemem --exact
@@ -3385,8 +3387,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
- ----------------------------------- 
+ 
 elevators.b-3-3.v1.jani
 
 storm --jani elevators.b-3-3.v1.jani --janiproperty  --timemem --exact
@@ -3482,9 +3485,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 ij.10.v1.jani
 
 
@@ -3578,9 +3581,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 ij.20.v1.jani
 
 storm --jani ij.20.v1.jani --janiproperty  --timemem --exact
@@ -3650,9 +3653,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 ij.3.v1.jani
 
 storm --jani ij.3.v1.jani --janiproperty  --timemem --exact
@@ -3725,10 +3728,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 pacman.v1.jani
 
 storm --jani pacman.v1.jani --janiproperty --constants MAXSTEPS=5  --timemem --exact
@@ -3810,9 +3812,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 philosophers-mdp.3.v1.jani
 
 storm --jani philosophers-mdp.3.v1.jani --janiproperty  --timemem --exact
@@ -3887,10 +3889,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 pnueli-zuck.3.v1.jani
 
 storm --jani pnueli-zuck.3.v1.jani --janiproperty --timemem '--minmax:method' interval-iteration
@@ -3961,10 +3962,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 pnueli-zuck.5.v1.jani
 
 storm --jani pnueli-zuck.5.v1.jani --janiproperty --timemem --exact
@@ -4038,9 +4038,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 rabin.3.v1.jani
 
 storm --jani rabin.3.v1.jani --janiproperty --timemem --exact
@@ -4112,9 +4112,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 rabin.5.v1.jani
 
 storm --jani rabin.5.v1.jani --janiproperty --timemem --exact
@@ -4185,10 +4185,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 rectangle-tireworld.11.v1.jani
 
 storm --jani rectangle-tireworld.11.v1.jani --janiproperty  --timemem --exact
@@ -4260,9 +4259,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 rectangle-tireworld.5.v1.jani
 
 storm --jani rectangle-tireworld.5.v1.jani --janiproperty  --timemem --exact
@@ -4328,10 +4327,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 resource-gathering.v2.jani
 
 storm --jani resource-gathering.v2.jani --janiproperty --constants B=400,GOLD_TO_COLLECT=30,GEM_TO_COLLECT=30 --timemem --exact
@@ -4425,9 +4423,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 tireworld.17.v1.jani
 
 storm --jani tireworld.17.v1.jani --janiproperty --timemem --exact
@@ -4507,9 +4505,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
- ----------------------------------- 
 tireworld.25.v1.jani
 
 storm --jani tireworld.25.v1.jani --janiproperty --timemem --exact
@@ -4576,10 +4574,9 @@ Performance statistics:
 
 
 
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
 
 
-
- ----------------------------------- 
 triangle-tireworld.9.v1.jani
 
 storm --jani triangle-tireworld.9.v1.jani --janiproperty --timemem --exact
@@ -4645,7 +4642,10 @@ Performance statistics:
 
 
 
- ----------------------------------- 
+
+++++++++++++New Benchmark File++++++++++++++New Benchmark File+++++++++++++++++++++++++++++++++
+
+
 exploding-blocksworld.5.v1.jani
 
 storm --jani exploding-blocksworld.5.v1.jani --janiproperty  --timemem --exact
