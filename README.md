@@ -1,18 +1,18 @@
 # Practical Course - Recent Advances in Model Checking
 
-##Group 4 - Correct Probabilistic Model Checking with Floating-Point Arithmetic
+## Group 4 - Correct Probabilistic Model Checking with Floating-Point Arithmetic
 
 This folder contains all files that were used for this project.
 It contains following folders:
 
--benchmarks
--Other Files and Tests
--paper_tests
--plots
--presentation
--storm_files
+- benchmarks
+- Other Files and Tests
+- paper_tests
+- plots
+- presentation
+- storm_files
 
-##Folder - benchmarks
+## Folder - benchmarks
 
 This folder contains all the benchmarks that were used.
 The 3 algorithms "vanilla storm with interval-iteration", "storm with our modified interval-iteration" and
@@ -27,12 +27,12 @@ The third output (below the +++++++++) is the algorithm provided from the benchm
 Not all benchmarks were fully tested on, also only a few benchmarks made it into the plots and final presentation due to the too large number of benchmarks.
 
 
-##Folder - Other files and texts
+## Folder - Other files and texts
 
 This folder contains the relevant papers and the less relevant code used to play around with the fesetround function
 
 
-##Folder - paper_tests
+## Folder - paper_tests
 
 This folder contains the tests to reproduce the examples mentioned in the paper.
 The property was shortened from the code in the paper ( P<=0.5 [s=1 | s=2 | s=5 | s=6 U s=3] instead of P=? [s=8 U (P<=0.5 [s=1 | s=2 | s=5 | s=6 U s=3])]) because the property in the paper couldn't be run in Prism.
@@ -40,17 +40,17 @@ The property was shortened from the code in the paper ( P<=0.5 [s=1 | s=2 | s=5 
 The commands are listed in terminal.txt. The file locations are probably different than what we used, so the commands need to be modified accordingly
 
 
-##Folder - plots
+## Folder - plots
 
 This folder contains the relevant data on the benchmarks we used in the endterm presentation as well as the plots we created.
 
 
-##Folder - presentation
+## Folder - presentation
 
 This folder contains both Midterm and Endterm presentations and some additional images we used in them
 
 
-##Folder - storm_files
+## Folder - storm_files
 
 This folder contains the file with the modified algorithm used. To use it, replace the file (after making a backup) IterativeMinMaxLinearEquationSolver.cpp in the folder storm > src > storm > solver > IterativeMinMaxLinearEquationSolver.cpp with this file. Afterwards run 'make' in the storm > build folder to make it work with your installation of storm.
 Afterwards you should be able to run the algorithm by adding '--minmax:method interval-iteration' to your storm command.
